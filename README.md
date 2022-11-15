@@ -13,3 +13,19 @@ The objective is to create a function which is able to return the current stock 
 Notes:
 - Transactions may exist for SKUs which are not present in `stock.json`. It should be assumed that the starting quantity for these is 0.
 - Functionality can be split into many files to help keep the project clear and organised 
+
+
+# Run this project
+# Install NPM dependencies using the below command: 
+npm install
+
+# Run this project: 
+npm tsc
+npm run dev
+
+# Hit the below url in Browser to check server running status:
+http://localhost:3000/
+
+# Get the latest status update about the stock using sku id:
+http://localhost:3000/stocks?sku=<sku-id>
+http://localhost:3000/stocks?sku=KED089097/68/09
