@@ -23,6 +23,9 @@ npm install
 npm tsc
 npm run dev
 
+# Run test cases
+npm run test
+
 # Hit the below url in Browser to check server running status:
 http://localhost:3000/
 

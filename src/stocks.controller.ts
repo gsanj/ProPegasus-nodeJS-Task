@@ -26,7 +26,7 @@ export const getCurrentStockLevel = async (skuId: string): Promise<any> => {
                 }
                 return { "sku": skuId, "qty": (filteredStockResult[0].stock - totalTransValue) };
             } else {
-                return filteredStockResult[0];
+                return { "sku": skuId, "qty": filteredStockResult[0].stock };
             }
         } else {
             throw new Error('Invalid skuId.');

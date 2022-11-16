@@ -8,10 +8,16 @@ import { Stock } from './stocks.interface';
 const app: Application = express();
 config();
 
-app.get('/', (req: Request, res: Response, next: NextFunction) => {
+/**
+* Health check api to check server status
+*/
+app.get('/', async (req: Request, res: Response, next: NextFunction) => {
     res.send("Welcome to NodeJS task assignment");
 })
 
+/**
+* Get current stock level
+*/
 app.get('/stocks', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const skuId: any = req.query.sku;
@@ -45,3 +51,5 @@ const PORT: Number = Number(process.env.PORT) || 3000;
 const server: Server = app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}/`);
 })
+
+export default app;
